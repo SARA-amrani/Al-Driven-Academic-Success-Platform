@@ -1,1162 +1,947 @@
-# SARA - Smart Adaptive Learning Roadmap Assistant
+# 🎓 EduNexus: AI-Driven Academic Success Platform
 
-![SARA Banner](./docs/images/banner.png)
-
-SARA is an intelligent educational platform that combines AI-powered adaptive learning with interactive course roadmaps to provide personalized learning experiences for students. Using advanced AI algorithms and interactive visualizations, SARA creates dynamic learning paths that adapt to each student's progress, understanding, and learning style.
+![EduNexus Banner](./docs/images/banner.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue.svg)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.0-green.svg)](https://nodejs.org/)
 [![React](https://img.shields.io/badge/React-18.0-blue.svg)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.0-purple.svg)](https://vitejs.dev/)
+[![Python](https://img.shields.io/badge/Python-3.9-blue.svg)](https://python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100-green.svg)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com/)
 
-## 🌟 Key Features
+## 🌟 Overview
 
-### For Students 📚
-- **AI-Powered Learning Paths**
-  - Dynamic course progression based on performance
-  - Real-time adaptation to learning style
-  - Personalized content recommendations
-  - Intelligent difficulty scaling
+**EduNexus** is a comprehensive AI-powered education platform designed for schools and universities. It provides personalized learning experiences through adaptive roadmaps, intelligent assessments, and multi-agent AI systems that work together to optimize student success.
 
-### For Educators 👨‍🏫
-- **Comprehensive Analytics Dashboard**
-  - Student progress tracking
-  - Performance metrics visualization
-  - Learning pattern analysis
-  - Intervention opportunity identification
+### Key Features
 
-### Technical Highlights 🛠
-- **Advanced AI Integration**
-  - Groq API for real-time AI processing
-  - Natural language understanding
-  - Predictive learning analytics
-  - Adaptive content generation
+- 🗺️ **Personalized Academic Roadmaps** - AI-generated learning paths based on real course enrollments
+- 🛡️ **Secure Adaptive Quizzing** - Anti-cheating measures with real-time difficulty adjustment
+- 📊 **Professor Analytics Dashboard** - Comprehensive student performance tracking
+- 🤖 **AI Learning Assistant** - 24/7 conversational support for students
+- 🔄 **Multi-Agent System** - Coordinated AI agents for automated learning workflows
+- 📱 **Responsive Design** - Works seamlessly across desktop, tablet, and mobile devices
 
-## 📸 Screenshots & Interface Guide
+## 📸 Platform Screenshots
 
 ### Student Dashboard
 ![Student Dashboard](./docs/images/dashboard.png)
-- Main student interface showing:
-  - Course overview cards
-  - Progress statistics
-  - Recent activity feed
-  - AI assistant quick access
-  - Upcoming deadlines
-  - Course recommendations
+*Main student interface showing course progress, AI assistant, and learning analytics*
 
 ### Interactive Learning Roadmap
 ![Learning Roadmap](./docs/images/roadmap.png)
-- Dynamic course progression visualization:
-  - Node-based learning path
-  - Color-coded status indicators
-  - Progress tracking
-  - AI-adapted difficulty levels
-  - Resource recommendations
+*Dynamic course progression with node-based visualization and adaptive difficulty*
 
-### Course View Interface
-![Course View](./docs/images/course-view.png)
-- Comprehensive course management:
-  - Course materials and resources
-  - Progress tracking
-  - Assignment submissions
-  - Discussion forums
-  - Interactive content
-
-### Assessment Interface
-![Assessment Interface](./docs/images/assessment.png)
-- Advanced assessment features:
-  - AI-powered question generation
-  - Real-time feedback
-  - Performance analytics
-  - Adaptive difficulty
-
-### Professor Dashboard
+### Professor Analytics Dashboard
 ![Professor Dashboard](./docs/images/professor-dashboard.png)
-- Complete teaching management:
-  - Student progress monitoring
-  - Course analytics
-  - Content management
-  - Assessment tools
+*Comprehensive teaching management with student progress monitoring and intervention tools*
 
-![Course Roadmap](./docs/images/roadmap.png)
-*Screenshot: Interactive Course Roadmap*
+### AI Assistant Interface
+![AI Assistant](./docs/images/ai-assistant.png)
+*24/7 conversational learning support with context-aware recommendations*
 
-- **Smart Assessment System**
-  - Automated skill level evaluation
-  - Performance-based content adaptation
-  - Comprehensive progress tracking
-  - Instant feedback and recommendations
+### Secure Quiz Environment
+![Quiz Interface](./docs/images/quiz-interface.png)
+*Fullscreen assessment environment with anti-cheating measures and real-time adaptation*
 
-- **AI Learning Assistant**
-  - Context-aware learning support
-  - Real-time question answering
-  - Resource recommendations
-  - Personalized learning tips
+## 🏗️ Architecture Overview
 
-### 👨‍🏫 For Professors
+EduNexus is built using a **microservices architecture** with multiple intelligent agents, each responsible for core education-related features. The platform is designed to be scalable, modular, and AI-integrated.
 
-- **Course Management Dashboard**
-  - Student progress monitoring
-  - Performance analytics
-  - Content customization tools
-  - Assessment management
+### 🧩 Core Services
 
-![Professor Dashboard](./docs/images/professor-dashboard.png)
-*Screenshot: Professor Dashboard Interface*
+| Service Name | Description | Technologies |
+|-------------|-------------|--------------|
+| **Frontend** | React-based UI for students and professors | React 18, TypeScript, Tailwind CSS |
+| **Auth Service** | JWT-based authentication and role management | Node.js, PostgreSQL, JWT |
+| **Enrollment Service** | Course and syllabus management | Python, FastAPI, PostgreSQL |
+| **Learning Engine** | AI roadmaps, progress tracking, adaptive evaluation | Python, ML models, Redis |
+| **Quiz Service** | Secure quiz delivery with adaptive questions | Node.js, Redis, WebSockets |
+| **Content Service** | Learning material curation and recommendations | Python, NLP, Vector DB |
+| **Feedback Service** | Analytics dashboards and reporting | Python, Plotly, Chart.js |
+| **AI Assistant** | GPT-powered conversational interface | Python, LangChain, OpenAI API |
+| **Security Monitor** | Anti-cheating and proctoring system | Node.js, WebRTC, Computer Vision |
+| **API Gateway** | Request routing and load balancing | Kong/NGINX, Rate Limiting |
 
-## 🛠 Technical Architecture
+### 🤖 AI Multi-Agent System
 
-### Frontend Technologies
-```typescript
-// Core Technologies
-├── React 18.0 with TypeScript 5.2
-├── Vite 5.0 for build optimization
-├── TailwindCSS for styling
-└── shadcn/ui for component library
+| Agent Name | Responsibility | Implementation |
+|------------|---------------|----------------|
+| **EnrollmentAgent** | Retrieves course registrations and syllabi | Python + FastAPI |
+| **StudyPlannerAgent** | Creates personalized learning roadmaps | ML models + Graph algorithms |
+| **ContentAgent** | Recommends learning resources | NLP + Vector similarity |
+| **ProgressAgent** | Tracks student activity and performance | Real-time analytics |
+| **QuizAgent** | Delivers secure, adaptive assessments | IRT + Anti-cheating |
+| **LevelEvaluatorAgent** | Adapts difficulty using ML models | Scikit-learn + TensorFlow |
+| **FeedbackAgent** | Generates reports for professors | Data aggregation + Visualization |
+| **StudentHelperAgent** | Provides 24/7 conversational support | GPT-4 + RAG system |
+| **SecurityAgent** | Monitors for cheating behaviors | Computer Vision + Pattern detection |
+| **MentorshipAgent** | Facilitates peer learning connections | Collaborative filtering |
 
-// Key Libraries
-├── @xyflow/react        // Interactive roadmap visualization
-├── groq                 // AI integration
-├── react-router-dom     // Navigation
-├── zod                  // Runtime type checking
-└── sonner              // Toast notifications
-```
-
-### AI Integration Architecture
-```mermaid
-graph LR
-    A[User Input] --> B[Groq API]
-    B --> C[Response Processing]
-    C --> D[Content Adaptation]
-    D --> E[UI Updates]
-    E --> F[Learning Path]
-    F --> G[Progress Tracking]
-    G --> H[Analytics]
-```
-
-### Data Flow
-```typescript
-interface LearningPathNode {
-  id: string;
-  type: 'topic' | 'assessment' | 'milestone';
-  data: {
-    title: string;
-    status: 'locked' | 'available' | 'completed';
-    difficulty: number;
-    adaptedContent: boolean;
-  };
-}
-```
-
-- **AI/ML Integration**
-  - Groq API for AI processing
-  - Custom ML models for learning path adaptation
-  - Real-time content personalization
-
-- **State Management & Routing**
-  - React Context for state management
-  - React Router for navigation
-  - Custom hooks for business logic
-
-## 🚀 Getting Started
-
-## 🛠 Development Setup
+## 🚀 Quick Start
 
 ### Prerequisites
 
-#### Required Software
-- Node.js 18 or higher
-- Bun package manager (`curl -fsSL https://bun.sh/install | bash`)
-- Git
-- VS Code (recommended)
+- **Node.js** 18.0 or higher
+- **Python** 3.9 or higher
+- **Docker** and **Docker Compose**
+- **PostgreSQL** 14 or higher
+- **Redis** 6.0 or higher
 
-#### Environment Variables
-Create a `.env` file in the root directory:
-```env
-VITE_GROQ_API_KEY=your_groq_api_key
-VITE_OPENAI_API_KEY=your_openai_api_key  # Optional
-VITE_API_BASE_URL=http://localhost:3000
-VITE_ENV=development
+### Installation Steps
+
+1. **Clone the Repository**
+```bash
+git clone https://github.com/yourusername/edunexus.git
+cd edunexus
 ```
 
-#### VS Code Extensions
-Essential extensions for optimal development:
-```json
-{
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "Vue.volar",
-    "usernamehw.errorlens",
-    "streetsidesoftware.code-spell-checker",
-    "eamodio.gitlens",
-    "christian-kohler.path-intellisense"
-  ]
-}
+2. **Environment Setup**
+```bash
+# Copy environment templates
+cp .env.example .env
+cp frontend/.env.example frontend/.env
+cp backend/.env.example backend/.env
+
+# Edit environment files with your configurations
 ```
 
-#### VS Code Settings
-Recommended workspace settings:
-```json
-{
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib"
-}
+3. **Docker Setup (Recommended)**
+```bash
+# Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
 ```
 
-### Project Setup
-
-1. **Clone and Install**
-```powershell
-# Clone the repository
-git clone https://github.com/yourusername/sara.git
-cd sara
-
+4. **Manual Setup (Alternative)**
+```bash
 # Install dependencies
-bun install
+npm install
+cd frontend && npm install
+cd ../backend && pip install -r requirements.txt
 
-# Copy environment template
-Copy-Item .env.example .env
+# Start services
+npm run dev:all
 ```
 
-2. **Configure Environment**
-Edit `.env` with your API keys and configuration.
+5. **Access the Platform**
+- **Frontend**: http://localhost:3000
+- **API Gateway**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
 
-3. **Start Development Server**
-```powershell
-# Start the dev server
-bun dev
-
-# In a separate terminal, run type checking
-bun type-check --watch
-```
-
-4. **Verify Installation**
-- Open `http://localhost:5173` in your browser
-- Confirm no TypeScript errors in VS Code
-- Verify API connections in Network tab
+## 🛠️ Development Guide
 
 ### Project Structure
 
-```typescript
-src/
-├── components/        // Reusable UI components
-│   ├── assistant/    // AI chat interface components
-│   ├── auth/         // Authentication components
-│   ├── layout/       // Layout components
-│   ├── professor/    // Professor-specific components
-│   ├── student/      // Student-specific components
-│   ├── theme/        // Theme components
-│   └── ui/           // shadcn/ui components
-│
-├── context/          // React Context providers
-│   ├── AuthContext.tsx
-│   └── ThemeProvider.tsx
-│
-├── data/            // Mock data and constants
-│   └── mockData.ts
-│
-├── hooks/           // Custom React hooks
-│   └── use-mobile.tsx
-│
-├── lib/             // Utility functions
-│   ├── groq.ts      // Groq API integration
-│   └── utils.ts     // Helper functions
-│
-├── pages/           // Page components
-│   ├── professor/
-│   └── student/
-│
-└── types/           // TypeScript type definitions
-    └── index.ts
-
 ```
+edunexus/
+├── frontend/                    # React frontend application
+│   ├── src/
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── auth/          # Authentication components
+│   │   │   ├── dashboard/     # Dashboard components
+│   │   │   ├── roadmap/       # Learning roadmap components
+│   │   │   ├── quiz/          # Quiz interface components
+│   │   │   ├── chat/          # AI assistant chat
+│   │   │   └── common/        # Shared components
+│   │   ├── pages/             # Page components
+│   │   │   ├── Login.jsx      # Authentication page
+│   │   │   ├── Dashboard.jsx  # Main dashboard
+│   │   │   ├── Quiz.jsx       # Quiz interface
+│   │   │   └── Profile.jsx    # User profile
+│   │   ├── services/          # API services
+│   │   │   ├── api.js         # Axios configuration
+│   │   │   ├── auth.js        # Authentication service
+│   │   │   ├── quiz.js        # Quiz service
+│   │   │   └── roadmap.js     # Roadmap service
+│   │   ├── hooks/             # Custom React hooks
+│   │   ├── context/           # React context providers
+│   │   ├── utils/             # Utility functions
+│   │   └── styles/            # CSS and styling
+│   ├── public/                # Static assets
+│   └── package.json
+│
+├── backend/                     # Microservices backend
+│   ├── services/
+│   │   ├── auth/              # Authentication service
+│   │   │   ├── app.py
+│   │   │   ├── models.py
+│   │   │   ├── routes.py
+│   │   │   └── requirements.txt
+│   │   ├── enrollment/        # Course enrollment service
+│   │   ├── learning-engine/   # AI learning engine
+│   │   ├── quiz/              # Quiz management service
+│   │   ├── content/           # Content recommendation
+│   │   ├── feedback/          # Analytics and reporting
+│   │   ├── ai-assistant/      # Conversational AI
+│   │   └── security/          # Anti-cheating monitoring
+│   ├── shared/                # Shared utilities
+│   │   ├── database.py        # Database connections
+│   │   ├── models.py          # Shared data models
+│   │   ├── utils.py           # Common utilities
+│   │   └── middleware.py      # Authentication middleware
+│   └── gateway/               # API Gateway
+│       ├── nginx.conf
+│       └── kong.yml
+│
+├── ai-agents/                   # AI agent implementations
+│   ├── enrollment_agent.py
+│   ├── study_planner_agent.py
+│   ├── content_agent.py
+│   ├── progress_agent.py
+│   ├── quiz_agent.py
+│   ├── level_evaluator_agent.py
+│   ├── feedback_agent.py
+│   ├── student_helper_agent.py
+│   ├── security_agent.py
+│   └── mentorship_agent.py
+│
+├── infrastructure/              # DevOps and deployment
+│   ├── docker/                # Docker configurations
+│   │   ├── frontend.Dockerfile
+│   │   ├── backend.Dockerfile
+│   │   └── nginx.Dockerfile
+│   ├── k8s/                   # Kubernetes manifests
+│   ├── terraform/             # Infrastructure as Code
+│   └── monitoring/            # Monitoring configurations
+│
+├── docs/                        # Documentation
+│   ├── api/                   # API documentation
+│   ├── deployment/            # Deployment guides
+│   ├── architecture/          # Architecture diagrams
+│   └── images/                # Screenshots and assets
+│
+├── tests/                       # Test suites
+│   ├── unit/                  # Unit tests
+│   ├── integration/           # Integration tests
+│   └── e2e/                   # End-to-end tests
+│
+├── scripts/                     # Development scripts
+│   ├── setup.sh              # Initial setup script
+│   ├── deploy.sh              # Deployment script
+│   └── test.sh                # Test runner
+│
+├── docker-compose.yml           # Docker Compose configuration
+├── docker-compose.dev.yml       # Development environment
+├── .env.example                 # Environment template
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+### Frontend Development
+
+#### Tech Stack
+- **React 18** with Hooks and Context API
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **React Flow** for interactive roadmaps
+- **Axios** for API communication
+- **React Router** for navigation
+- **Socket.io** for real-time features
+
+#### Key Components
+
+1. **Authentication System**
+```javascript
+// services/auth.js
+export const login = async (credentials) => {
+  const response = await api.post('/auth/login', credentials);
+  localStorage.setItem('token', response.data.token);
+  return response.data;
+};
+
+export const logout = () => {
+  localStorage.removeItem('token');
+  window.location.href = '/login';
+};
+
+export const getUser = () => {
+  const token = localStorage.getItem('token');
+  return token ? JSON.parse(atob(token.split('.')[1])) : null;
+};
+```
+
+2. **Roadmap Visualization**
+```javascript
+// components/roadmap/RoadmapGraph.jsx
+import ReactFlow, { Controls, Background } from 'react-flow-renderer';
+
+const RoadmapGraph = ({ nodes, edges, onNodeClick }) => {
+  return (
+    <div className="h-96 w-full">
+      <ReactFlow
+        nodes={nodes}
+        edges={edges}
+        onNodeClick={onNodeClick}
+        fitView
+      >
+        <Controls />
+        <Background />
+      </ReactFlow>
+    </div>
+  );
+};
+```
+
+3. **AI Assistant Chat**
+```javascript
+// components/chat/ChatBot.jsx
+const ChatBot = () => {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+
+  const sendMessage = async () => {
+    const response = await api.post('/ai-assistant/chat', {
+      message: input,
+      context: messages.slice(-5)
+    });
+    
+    setMessages([...messages, 
+      { role: 'user', content: input },
+      { role: 'assistant', content: response.data.message }
+    ]);
+    setInput('');
+  };
+
+  return (
+    <div className="chat-container">
+      {/* Chat implementation */}
+    </div>
+  );
+};
+```
+
+#### Development Commands
+```bash
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+
+# Type checking
+npm run type-check
+
+# Linting
+npm run lint
+```
+
+### Backend Development
+
+#### Tech Stack
+- **Python FastAPI** for API services
+- **Node.js Express** for real-time features
+- **PostgreSQL** for relational data
+- **Redis** for caching and sessions
+- **MongoDB** for content and chat history
+- **Celery** for background tasks
+- **WebSockets** for real-time communication
+
+#### Service Implementation Example
+
+1. **Authentication Service**
+```python
+# services/auth/app.py
+from fastapi import FastAPI, HTTPException, Depends
+from fastapi.security import HTTPBearer
+import jwt
+from datetime import datetime, timedelta
+
+app = FastAPI()
+security = HTTPBearer()
+
+@app.post("/login")
+async def login(credentials: LoginCredentials):
+    user = authenticate_user(credentials.username, credentials.password)
+    if not user:
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    
+    token = create_access_token({"sub": user.id, "role": user.role})
+    return {"access_token": token, "token_type": "bearer"}
+```
+
+2. **Learning Engine Service**
+```python
+# services/learning-engine/app.py
+from fastapi import FastAPI
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+app = FastAPI()
+
+@app.post("/generate-roadmap")
+async def generate_roadmap(student_id: str, course_id: str):
+    # AI logic for generating personalized roadmap
+    student_data = get_student_performance(student_id)
+    course_syllabus = get_course_syllabus(course_id)
+    
+    roadmap = ai_generate_roadmap(student_data, course_syllabus)
+    return {"roadmap": roadmap}
+
+def ai_generate_roadmap(student_data, syllabus):
+    # Implementation of AI roadmap generation
+    pass
+```
+
+3. **Quiz Service**
+```python
+# services/quiz/app.py
+from fastapi import FastAPI, WebSocket
+import asyncio
+
+app = FastAPI()
+
+@app.websocket("/quiz/{quiz_id}")
+async def quiz_websocket(websocket: WebSocket, quiz_id: str):
+    await websocket.accept()
+    
+    # Adaptive quiz logic
+    while True:
+        data = await websocket.receive_json()
+        response = process_quiz_response(data)
+        await websocket.send_json(response)
+```
+
+#### Development Commands
+```bash
+# Start all services
+docker-compose up -d
+
+# View service logs
+docker-compose logs -f [service-name]
+
+# Run specific service
+cd services/auth && python app.py
+
+# Run tests
+pytest tests/
+
+# Database migrations
+alembic upgrade head
+```
+
+### AI Agents Development
+
+#### Agent Architecture
+Each AI agent is implemented as an independent service that communicates via message queues or direct API calls.
+
+```python
+# ai-agents/base_agent.py
+from abc import ABC, abstractmethod
+import asyncio
+import json
+
+class BaseAgent(ABC):
+    def __init__(self, name: str):
+        self.name = name
+        self.is_active = False
+    
+    @abstractmethod
+    async def process_message(self, message: dict):
+        pass
+    
+    async def start(self):
+        self.is_active = True
+        await self.listen_for_messages()
+    
+    async def listen_for_messages(self):
+        while self.is_active:
+            # Message queue implementation
+            await asyncio.sleep(0.1)
+```
+
+#### Example Agent Implementation
+```python
+# ai-agents/study_planner_agent.py
+from base_agent import BaseAgent
+import numpy as np
+from sklearn.cluster import KMeans
+
+class StudyPlannerAgent(BaseAgent):
+    def __init__(self):
+        super().__init__("StudyPlannerAgent")
+        self.ml_model = self.load_model()
+    
+    async def process_message(self, message: dict):
+        if message["type"] == "generate_roadmap":
+            return await self.generate_roadmap(message["data"])
+    
+    async def generate_roadmap(self, student_data: dict):
+        # AI logic for roadmap generation
+        difficulty_level = self.assess_difficulty(student_data)
+        learning_path = self.create_learning_path(difficulty_level)
+        
+        return {
+            "roadmap": learning_path,
+            "difficulty": difficulty_level,
+            "estimated_completion": self.estimate_completion_time(learning_path)
+        }
+    
+    def assess_difficulty(self, student_data: dict):
+        # ML model to assess appropriate difficulty
+        features = self.extract_features(student_data)
+        return self.ml_model.predict([features])[0]
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+#### Frontend Environment (`.env`)
+```bash
+REACT_APP_API_URL=http://localhost:8000
+REACT_APP_WS_URL=ws://localhost:8000
+REACT_APP_GROQ_API_KEY=your_groq_api_key
+REACT_APP_ENVIRONMENT=development
+REACT_APP_ENABLE_MOCK_DATA=true
+```
+
+#### Backend Environment (`.env`)
+```bash
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/edunexus
+REDIS_URL=redis://localhost:6379
+MONGODB_URL=mongodb://localhost:27017/edunexus
+
+# Authentication
+JWT_SECRET=your_jwt_secret_key
+JWT_EXPIRATION=24h
+REFRESH_TOKEN_EXPIRATION=7d
+
+# AI Services
+OPENAI_API_KEY=your_openai_api_key
+GROQ_API_KEY=your_groq_api_key
+HUGGINGFACE_API_KEY=your_huggingface_api_key
+
+# External Services
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
+
+# Security
+CORS_ORIGINS=http://localhost:3000,https://yourdomain.com
+RATE_LIMIT_REQUESTS=100
+RATE_LIMIT_WINDOW=3600
+
+# Monitoring
+SENTRY_DSN=your_sentry_dsn
+LOG_LEVEL=INFO
+```
+
+### Docker Configuration
+
+#### Docker Compose (Development)
+```yaml
+# docker-compose.dev.yml
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/edunexus
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: edunexus
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
+```
+
+## 🧪 Testing
+
+### Test Structure
+```bash
+tests/
+├── unit/                    # Unit tests
+│   ├── frontend/
+│   │   ├── components/
+│   │   └── services/
+│   └── backend/
+│       ├── auth/
+│       ├── quiz/
+│       └── learning-engine/
+├── integration/             # Integration tests
+│   ├── api/
+│   └── database/
+└── e2e/                     # End-to-end tests
+    ├── student-journey/
+    └── professor-workflow/
+```
+
+### Running Tests
+```bash
+# Frontend tests
+cd frontend && npm test
+
+# Backend tests
+cd backend && pytest
+
+# E2E tests
+npm run test:e2e
+
+# All tests
+npm run test:all
+```
+
+### Test Examples
+```javascript
+// frontend/src/components/__tests__/Dashboard.test.jsx
+import { render, screen } from '@testing-library/react';
+import Dashboard from '../Dashboard';
+
+test('renders dashboard with course cards', () => {
+  render(<Dashboard />);
+  expect(screen.getByText('My Courses')).toBeInTheDocument();
+});
+```
+
+```python
+# backend/tests/test_auth.py
+import pytest
+from fastapi.testclient import TestClient
+from services.auth.app import app
+
+client = TestClient(app)
+
+def test_login_success():
+    response = client.post("/login", json={
+        "username": "test@example.com",
+        "password": "testpassword"
+    })
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+```
+
+## 🚀 Deployment
+
+### Production Deployment
+
+#### Docker Production Build
+```bash
+# Build production images
+docker-compose -f docker-compose.prod.yml build
+
+# Deploy to production
+docker-compose -f docker-compose.prod.yml up -d
+
+# Health check
+docker-compose ps
+```
+
+#### Kubernetes Deployment
+```bash
+# Apply Kubernetes manifests
+kubectl apply -f infrastructure/k8s/
+
+# Check deployment status
+kubectl get pods
+kubectl get services
+```
+
+### Monitoring and Logging
+
+#### Health Checks
+```bash
+# API Gateway health
+curl http://localhost:8000/health
+
+# Individual service health
+curl http://localhost:8001/auth/health
+curl http://localhost:8002/quiz/health
+```
+
+#### Monitoring Stack
+- **Prometheus** for metrics collection
+- **Grafana** for visualization
+- **ELK Stack** for log management
+- **Sentry** for error tracking
+
+## 📚 API Documentation
+
+### Authentication Endpoints
+```bash
+POST /auth/login          # User login
+POST /auth/logout         # User logout
+POST /auth/refresh        # Refresh token
+GET  /auth/profile        # Get user profile
+```
+
+### Student Endpoints
+```bash
+GET  /student/dashboard   # Student dashboard data
+GET  /student/roadmap     # Learning roadmap
+POST /student/progress    # Update progress
+GET  /student/courses     # Enrolled courses
+```
+
+### Quiz Endpoints
+```bash
+GET  /quiz/list          # Available quizzes
+POST /quiz/start         # Start quiz session
+POST /quiz/submit        # Submit quiz answers
+GET  /quiz/results       # Quiz results
+```
+
+### AI Assistant Endpoints
+```bash
+POST /ai/chat            # Chat with AI assistant
+GET  /ai/suggestions     # Get learning suggestions
+POST /ai/feedback        # Provide feedback
+```
+
+### Professor Endpoints
+```bash
+GET  /professor/dashboard    # Professor dashboard
+GET  /professor/students     # Student list
+POST /professor/quiz         # Create quiz
+GET  /professor/analytics    # Student analytics
+```
+
+## 🤝 Contributing
 
 ### Development Workflow
 
-1. **Branch Management**
-```powershell
-# Create feature branch
-git checkout -b feature/your-feature-name
+1. **Fork the Repository**
+2. **Create Feature Branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Changes and Test**
+   ```bash
+   npm run test
+   npm run lint
+   ```
+4. **Commit Changes**
+   ```bash
+   git commit -m "Add: your feature description"
+   ```
+5. **Push and Create PR**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 
-# Regular updates
-git pull origin main
-git merge main
+### Code Standards
+
+#### Frontend
+- Use TypeScript for type safety
+- Follow React best practices
+- Use functional components with hooks
+- Implement proper error boundaries
+- Follow accessibility guidelines (WCAG 2.1)
+
+#### Backend
+- Use Python type hints
+- Follow PEP 8 style guide
+- Implement proper error handling
+- Use async/await for I/O operations
+- Write comprehensive tests
+
+#### General
+- Write clear commit messages
+- Add documentation for new features
+- Maintain test coverage above 80%
+- Use semantic versioning
+
+## 🔒 Security
+
+### Security Measures
+- **JWT Authentication** with refresh tokens
+- **HTTPS Encryption** for all communications
+- **Input Validation** and sanitization
+- **Rate Limiting** on all endpoints
+- **CORS Configuration** for cross-origin requests
+- **SQL Injection Prevention** using parameterized queries
+- **XSS Protection** with content security policies
+
+### Anti-Cheating Features
+- **Fullscreen Mode** enforcement during quizzes
+- **Tab Switch Detection** with automatic warnings
+- **Time Tracking** for each question
+- **Randomized Questions** from question banks
+- **Proctoring Integration** (optional)
+- **Behavioral Analysis** for suspicious patterns
+
+## 📈 Performance
+
+### Optimization Strategies
+- **Code Splitting** for faster loading
+- **Lazy Loading** of components and routes
+- **Caching** with Redis for frequent queries
+- **Database Indexing** for optimal query performance
+- **CDN Integration** for static assets
+- **Compression** of API responses
+
+### Monitoring Metrics
+- **Response Time** for API endpoints
+- **Database Query Performance**
+- **User Engagement** metrics
+- **Error Rates** and exceptions
+- **System Resource Usage**
+
+## 🌍 Internationalization
+
+### Supported Languages
+- English (default)
+- French
+- Spanish
+- German
+- Mandarin Chinese
+
+### Implementation
+```javascript
+// i18n configuration
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+i18n.use(initReactI18next).init({
+  resources: {
+    en: { translation: require('./locales/en.json') },
+    fr: { translation: require('./locales/fr.json') },
+    es: { translation: require('./locales/es.json') }
+  },
+  lng: 'en',
+  fallbackLng: 'en'
+});
 ```
 
-2. **Code Quality**
-```powershell
-# Run type checking
-bun type-check
+## 🗺️ Roadmap
 
-# Run linting
-bun lint
+### Phase 1 (Current) - Core Platform
+- ✅ Basic authentication system
+- ✅ Student dashboard and roadmaps
+- ✅ Quiz system with adaptive difficulty
+- ✅ AI assistant integration
+- ✅ Professor analytics dashboard
 
-# Run tests
-bun test
+### Phase 2 - Enhanced AI Features
+- 🔄 Advanced learning analytics
+- 🔄 Personalized content recommendations
+- 🔄 Predictive performance modeling
+- 🔄 Natural language processing for content analysis
+- 🔄 Voice-based interactions
 
-# Format code
-bun format
-```
+### Phase 3 - Platform Expansion
+- 📅 Mobile applications (iOS/Android)
+- 📅 LMS integrations (Moodle, Canvas, Blackboard)
+- 📅 Gamification elements
+- 📅 Collaborative learning features
+- 📅 Advanced proctoring capabilities
 
-3. **Building for Production**
-```powershell
-# Create production build
-bun run build
+### Phase 4 - Enterprise Features
+- 📅 Multi-tenant architecture
+- 📅 White-label solutions
+- 📅 Advanced reporting and analytics
+- 📅 API marketplace for third-party integrations
+- 📅 Enterprise SSO integration
 
-# Preview production build
-bun preview
-```
+## 🆘 Support
 
-## Project Structure
+### Getting Help
+- **Documentation**: [docs.edunexus.com](https://docs.edunexus.com)
+- **GitHub Issues**: [Create an issue](https://github.com/yourusername/edunexus/issues)
+- **Email Support**: support@edunexus.com
+- **Community Discord**: [Join our Discord](https://discord.gg/edunexus)
 
-```
-sara/
-├── src/
-│   ├── components/        # Reusable UI components
-│   │   ├── assistant/    # AI chat interface components
-│   │   ├── auth/        # Authentication components
-│   │   ├── professor/   # Professor-specific components
-│   │   ├── student/     # Student-specific components
-│   │   └── ui/          # Base UI components
-│   ├── context/         # React context providers
-│   ├── data/           # Mock data and constants
-│   ├── hooks/          # Custom React hooks
-│   ├── lib/            # Utility functions and APIs
-│   ├── pages/          # Page components
-│   └── types/          # TypeScript type definitions
-```
+### Troubleshooting
 
-## Key Features Implementation
+#### Common Issues
 
-### Adaptive Learning Roadmap
+1. **Docker Container Won't Start**
+   ```bash
+   # Check logs
+   docker-compose logs [service-name]
+   
+   # Rebuild containers
+   docker-compose down
+   docker-compose up --build
+   ```
 
-The platform uses a sophisticated algorithm to generate personalized learning paths:
+2. **Database Connection Issues**
+   ```bash
+   # Check database status
+   docker-compose ps
+   
+   # Reset database
+   docker-compose down -v
+   docker-compose up -d
+   ```
 
-```typescript
-interface RoadmapNodeData {
-  title: string;
-  description: string;
-  status: 'locked' | 'available' | 'in_progress' | 'completed';
-  difficulty: number;
-  estimatedHours: number;
-  prerequisites: string[];
-  resources: Resource[];
-  assessments: any[];
-  curriculumWeek: number;
-  learningObjectives: string[];
-  adaptedContent: boolean;
-}
-```
+3. **AI Service Timeout**
+   ```bash
+   # Check API keys in environment
+   echo $OPENAI_API_KEY
+   
+   # Restart AI services
+   docker-compose restart ai-assistant
+   ```
 
-### Assessment System
-
-Comprehensive assessment system that evaluates:
-- Topic proficiency
-- Learning pace
-- Difficulty adaptation
-- Resource effectiveness
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 👥 Contributors
 
-- shadcn/ui for the beautiful component library
-- React Flow for the interactive graph visualization
-- Groq for AI capabilities
-- All contributors who have helped shape this project
+- **Team Lead**: [Your Name](https://github.com/yourusername)
+- **Frontend Developer**: [Developer Name](https://github.com/developer)
+- **Backend Developer**: [Developer Name](https://github.com/developer)
+- **AI Engineer**: [Developer Name](https://github.com/developer)
+- **DevOps Engineer**: [Developer Name](https://github.com/developer)
 
-## Support
+## 🙏 Acknowledgments
 
-For support, please open an issue in the GitHub repository or contact our support team at support@sara-learning.com.
+- OpenAI for GPT API integration
+- Groq for high-performance AI inference
+- React Flow for interactive roadmap visualization
+- FastAPI for robust backend development
+- The education technology community for inspiration
 
 ---
-### 4. Course View Interface (`course-view.png`)
-- **Size**: 1920x1080px
-- **Key Elements**:
-  - Course header with cover image
-  - Tab navigation:
-    - Overview
-    - Resources
-    - Assignments
-    - Discussions
-  - Progress cards
-  - Resource listings
-  - Instructor information
-- **State**: Show the overview tab with some progress
 
-### 5. Assessment Interface (`assessment.png`)
-- **Size**: 1920x1080px
-- **Key Elements**:
-  - Question display
-  - Multiple choice options
-  - Progress indicator
-  - Timer
-  - Navigation controls
-- **State**: Mid-assessment with some questions answered
+**Built with ❤️ for better education worldwide**
 
-### 6. Professor Dashboard (`professor-dashboard.png`)
-- **Size**: 1920x1080px
-- **Key Elements**:
-  - Class overview statistics
-  - Student performance metrics
-  - Course management tools
-  - Assessment creation interface
-  - Analytics graphs
-- **State**: Show active class data and analytics
-
-## Screenshot Guidelines
-
-### Technical Requirements
-1. **Resolution**: Minimum 1920x1080px (4K preferred)
-2. **Format**: PNG with transparency where applicable
-3. **DPI**: 144 minimum
-4. **Color Profile**: sRGB
-
-### Visual Style Guidelines
-1. **Theme**:
-   - Capture in both light and dark modes
-   - Use system theme that matches documentation
-   - Ensure consistent styling across all screenshots
-
-2. **Content**:
-   - Use realistic but anonymized data
-   - Show varied states and interactions
-   - Include hover/active states where relevant
-
-3. **Composition**:
-   - Follow the Rule of Thirds
-   - Ensure clear hierarchy
-   - Highlight key features
-   - Maintain consistent zoom level (100%)
-
-4. **Quality Checklist**:
-   - [ ] No personal/sensitive information
-   - [ ] Clear, crisp text
-   - [ ] Proper contrast
-   - [ ] Consistent padding
-   - [ ] No overlapping elements
-   - [ ] No browser UI elements
-   - [ ] No cursor visible unless demonstrating interaction
-
-### Capture Process
-
-1. **Preparation**:
-   ```bash
-   # Create screenshots directory if it doesn't exist
-   New-Item -ItemType Directory -Force -Path "docs/images"
-   ```
-
-2. **Browser Setup**:
-   - Use Chrome or Firefox in Developer Mode
-   - Set viewport to exactly 1920x1080
-   - Clear cache and reset zoom to 100%
-   - Use clean profile without extensions
-
-3. **Capture Tools**:
-   - Windows: Snipping Tool or ShareX
-   - macOS: Screenshot.app or CleanShot X
-   - Cross-platform: LightShot or Screely
-
-4. **Post-Processing**:
-   - Optimize images using TinyPNG
-   - Maintain aspect ratios
-   - Add drop shadows if needed (8px blur, 25% opacity)
-   - Compress without visible quality loss
-
-### File Naming Convention
-
-```
-sara-[interface]-[variant]-[theme].[ext]
-```
-
-Examples:
-- sara-dashboard-main-light.png
-- sara-roadmap-active-dark.png
-- sara-assessment-quiz-light.png
-
-### Organization
-
-Final screenshot structure:
-```
-docs/
-└── images/
-    ├── banner.png
-    ├── dashboard/
-    │   ├── light/
-    │   └── dark/
-    ├── roadmap/
-    │   ├── light/
-    │   └── dark/
-    ├── course-view/
-    │   ├── light/
-    │   └── dark/
-    ├── assessment/
-    │   ├── light/
-    │   └── dark/
-    └── professor/
-        ├── light/
-        └── dark/
-```
-
-### Maintenance
-
-1. **Version Control**:
-   - Keep original PSDs/Sketch files
-   - Include screenshot metadata
-   - Document any special requirements
-
-2. **Update Process**:
-   - Review screenshots quarterly
-   - Update when UI changes
-   - Maintain consistency across docs
-
-3. **Quality Assurance**:
-   - Peer review all screenshots
-   - Verify across different displays
-   - Test in documentation context
-
-### Accessibility Considerations
-
-1. **Contrast**:
-   - Minimum contrast ratio: 4.5:1
-   - Test with color blindness simulators
-   - Verify readability at different sizes
-
-2. **Text**:
-   - Minimum font size: 12px
-   - Clear typography
-   - Proper spacing
-
-3. **Alternative Text**:
-   - Provide detailed alt text
-   - Include captions
-   - Describe key features
-
-## Implementation Checklist
-
-- [ ] Create directory structure
-- [ ] Set up capture environment
-- [ ] Prepare test data
-- [ ] Capture base screenshots
-- [ ] Process and optimize
-- [ ] Add to documentation
-- [ ] Peer review
-- [ ] Update README.md
-- [ ] Final validation
-
-# SARA API Documentation
-
-## Overview
-
-SARA's API provides programmatic access to the platform's core functionality, enabling integration with external systems and custom implementations. This document outlines the available endpoints, authentication methods, and usage examples.
-
-## Authentication
-
-### Obtaining API Keys
-
-1. Navigate to the SARA dashboard
-2. Go to Settings > API Keys
-3. Generate a new API key
-4. Store the key securely
-
-### Authentication Header
-
-```typescript
-headers: {
-  'Authorization': 'Bearer your_api_key_here',
-  'Content-Type': 'application/json'
-}
-```
-
-## Core Endpoints
-
-### Learning Path Management
-
-#### Get Learning Path
-
-```typescript
-GET /api/v1/learning-path/{userId}
-
-Response:
-{
-  nodes: LearningNode[];
-  edges: LearningEdge[];
-  metadata: {
-    currentLevel: number;
-    progress: number;
-    nextMilestone: string;
-  }
-}
-```
-
-#### Update Progress
-
-```typescript
-POST /api/v1/learning-path/{userId}/progress
-Body: {
-  nodeId: string;
-  status: 'completed' | 'in_progress';
-  score?: number;
-}
-```
-
-### Assessment System
-
-#### Generate Assessment
-
-```typescript
-POST /api/v1/assessment/generate
-Body: {
-  topic: string;
-  difficulty: number;
-  questionCount: number;
-}
-
-Response: {
-  id: string;
-  questions: Question[];
-  metadata: AssessmentMetadata;
-}
-```
-
-#### Submit Assessment
-
-```typescript
-POST /api/v1/assessment/{assessmentId}/submit
-Body: {
-  answers: Answer[];
-  timeSpent: number;
-}
-
-Response: {
-  score: number;
-  feedback: Feedback[];
-  recommendations: Recommendation[];
-}
-```
-
-### AI Assistant
-
-#### Generate Response
-
-```typescript
-POST /api/v1/assistant/chat
-Body: {
-  message: string;
-  context?: string;
-  history?: Message[];
-}
-
-Response: {
-  response: string;
-  suggestions: string[];
-  resources: Resource[];
-}
-```
-
-## Data Types
-
-### Learning Path Types
-
-```typescript
-interface LearningNode {
-  id: string;
-  type: 'topic' | 'assessment' | 'milestone';
-  data: {
-    title: string;
-    description: string;
-    status: 'locked' | 'available' | 'completed';
-    difficulty: number;
-    resources: Resource[];
-  };
-}
-
-interface LearningEdge {
-  id: string;
-  source: string;
-  target: string;
-  type: 'prerequisite' | 'recommended';
-}
-```
-
-### Assessment Types
-
-```typescript
-interface Question {
-  id: string;
-  type: QuestionType;
-  content: string;
-  options?: string[];
-  correctAnswer: string | string[];
-  explanation: string;
-  difficulty: number;
-}
-
-interface Answer {
-  questionId: string;
-  response: string | string[];
-  timeSpent: number;
-}
-
-interface Feedback {
-  type: 'success' | 'error' | 'info';
-  message: string;
-  details?: string;
-  resources?: Resource[];
-}
-```
-
-## Error Handling
-
-### Error Responses
-
-```typescript
-{
-  error: {
-    code: string;
-    message: string;
-    details?: any;
-  }
-}
-```
-
-### Common Error Codes
-
-- `400` - Bad Request
-- `401` - Unauthorized
-- `403` - Forbidden
-- `404` - Not Found
-- `429` - Too Many Requests
-- `500` - Internal Server Error
-
-## Rate Limiting
-
-- 100 requests per minute per API key
-- Burst limit: 200 requests
-- Headers:
-  - `X-RateLimit-Limit`
-  - `X-RateLimit-Remaining`
-  - `X-RateLimit-Reset`
-
-## Webhooks
-
-### Available Events
-
-- `learning.progress.updated`
-- `assessment.completed`
-- `milestone.achieved`
-- `content.generated`
-
-### Webhook Format
-
-```typescript
-{
-  event: string;
-  timestamp: string;
-  data: {
-    userId: string;
-    eventData: any;
-  };
-  signature: string;
-}
-```
-
-## Examples
-
-### JavaScript/TypeScript
-
-```typescript
-const sara = new SARAClient('your_api_key');
-
-// Get learning path
-const path = await sara.getLearningPath(userId);
-
-// Generate assessment
-const assessment = await sara.generateAssessment({
-  topic: 'JavaScript Basics',
-  difficulty: 0.7,
-  questionCount: 10
-});
-
-// Submit answers
-const result = await sara.submitAssessment(assessmentId, {
-  answers: [/* ... */],
-  timeSpent: 600
-});
-```
-
-### Python
-
-```python
-from sara_client import SARA
-
-sara = SARA('your_api_key')
-
-# Get learning path
-path = sara.get_learning_path(user_id)
-
-# Generate assessment
-assessment = sara.generate_assessment(
-    topic='JavaScript Basics',
-    difficulty=0.7,
-    question_count=10
-)
-
-# Submit answers
-result = sara.submit_assessment(
-    assessment_id,
-    answers=[...],
-    time_spent=600
-)
-```
-
-## Best Practices
-
-1. **Error Handling**
-   - Implement proper error handling
-   - Use exponential backoff for retries
-   - Log all API interactions
-
-2. **Rate Limiting**
-   - Monitor rate limit headers
-   - Implement request queuing
-   - Use bulk operations where possible
-
-3. **Security**
-   - Store API keys securely
-   - Use HTTPS for all requests
-   - Validate webhook signatures
-
-## SDKs and Tools
-
-- [SARA TypeScript SDK](https://github.com/sara/typescript-sdk)
-- [SARA Python Client](https://github.com/sara/python-client)
-- [SARA CLI](https://github.com/sara/cli)
-- [Postman Collection](https://www.postman.com/sara/workspace)
-
-## Support
-
-- Documentation: [docs.sara.dev](https://docs.sara.dev)
-- Issues: [GitHub Issues](https://github.com/sara/sara/issues)
-- Email: api-support@sara.dev
-
-## Changelog
-
-### v1.0.0 (2025-05-23)
-- Initial API release
-- Core endpoints implementation
-- Webhook support
-- Rate limiting
-
-### v1.1.0 (Coming Soon)
-- Bulk operations
-- Advanced filtering
-- Real-time updates
-- Enhanced analytics
-
-
-# SARA Platform Architecture
-
-## Overview
-
-SARA (Smart Adaptive Learning Roadmap Assistant) is built on a modern, scalable architecture that emphasizes modularity, type safety, and real-time adaptability. This document outlines the key architectural decisions and patterns used in the platform.
-
-## Core Technologies
-
-### Frontend Stack
-- **React 18** - UI framework with concurrent features
-- **TypeScript** - Static typing and enhanced developer experience
-- **Vite** - Next-generation frontend tooling
-- **TailwindCSS** - Utility-first CSS framework
-- **shadcn/ui** - Accessible component system
-- **React Flow** - Interactive node-based UI
-
-### AI Integration
-- **Groq API** - High-performance AI model integration
-- **Custom ML Models** - Learning path adaptation
-- **Vector Embeddings** - Content similarity matching
-
-## Architecture Patterns
-
-### Component Architecture
-
-```typescript
-components/
-├── atomic/       // Atomic design pattern
-│   ├── atoms/    // Basic building blocks
-│   ├── molecules/
-│   └── organisms/
-├── functional/   // Pure functional components
-└── stateful/     // Components with state management
-```
-
-### Data Flow
-
-```mermaid
-graph TD
-    A[User Action] --> B[Component State]
-    B --> C[Context API]
-    C --> D[API Layer]
-    D --> E[AI Processing]
-    E --> F[UI Updates]
-```
-
-### State Management
-
-1. **Local Component State**
-   ```typescript
-   interface ComponentState {
-     isLoading: boolean;
-     data: DataType | null;
-     error: Error | null;
-   }
-   ```
-
-2. **Global Context**
-   ```typescript
-   interface GlobalState {
-     user: UserState;
-     theme: ThemeState;
-     settings: SettingsState;
-   }
-   ```
-
-3. **AI State Management**
-   ```typescript
-   interface AIState {
-     model: string;
-     temperature: number;
-     context: string[];
-     history: Message[];
-   }
-   ```
-
-## Key Features Implementation
-
-### Adaptive Learning System
-
-```typescript
-interface AdaptiveLearning {
-  getCurrentLevel(): number;
-  assessProgress(score: number): void;
-  adjustDifficulty(): void;
-  recommendNextContent(): Content[];
-}
-```
-
-### Real-time Progress Tracking
-
-```typescript
-interface ProgressTracker {
-  trackEvent(event: LearningEvent): void;
-  calculateProgress(): number;
-  generateInsights(): LearningInsight[];
-}
-```
-
-### AI-Powered Content Generation
-
-```typescript
-interface ContentGenerator {
-  generateQuestion(topic: string): Promise<Question>;
-  adaptContent(content: Content, level: number): Promise<Content>;
-  createFeedback(response: StudentResponse): Promise<Feedback>;
-}
-```
-
-## Security Considerations
-
-1. **Authentication**
-   - JWT-based auth
-   - Refresh token rotation
-   - Session management
-
-2. **Data Protection**
-   - End-to-end encryption
-   - Data anonymization
-   - GDPR compliance
-
-3. **API Security**
-   - Rate limiting
-   - Request validation
-   - CORS configuration
-
-## Performance Optimizations
-
-1. **Code Splitting**
-   ```typescript
-   const Component = React.lazy(() => import('./Component'));
-   ```
-
-2. **Caching Strategy**
-   ```typescript
-   interface CacheConfig {
-     ttl: number;
-     maxSize: number;
-     invalidationRules: Rule[];
-   }
-   ```
-
-3. **Resource Loading**
-   - Image optimization
-   - Lazy loading
-   - Preloading critical assets
-
-## Testing Strategy
-
-1. **Unit Tests**
-   ```typescript
-   describe('Component', () => {
-     it('should render correctly', () => {
-       // Test implementation
-     });
-   });
-   ```
-
-2. **Integration Tests**
-   - API integration
-   - State management
-   - User flows
-
-3. **E2E Tests**
-   - Critical path testing
-   - User journey validation
-   - Performance monitoring
-
-## Deployment Architecture
-
-```mermaid
-graph LR
-    A[Code Push] --> B[CI/CD Pipeline]
-    B --> C[Build Process]
-    C --> D[Testing]
-    D --> E[Staging]
-    E --> F[Production]
-```
-
-## Monitoring and Analytics
-
-1. **Performance Metrics**
-   - Load times
-   - Interaction delays
-   - API response times
-
-2. **User Analytics**
-   - Learning patterns
-   - Feature usage
-   - Error rates
-
-3. **AI Model Monitoring**
-   - Accuracy metrics
-   - Response times
-   - Adaptation effectiveness
-
-## Future Considerations
-
-1. **Scalability**
-   - Microservices architecture
-   - Serverless functions
-   - Edge computing
-
-2. **AI Enhancements**
-   - Multi-model integration
-   - Real-time adaptation
-   - Personalization improvements
-
-3. **Platform Extensions**
-   - Mobile applications
-   - Offline support
-   - API marketplace
-
-## Contributing
-
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for detailed contribution guidelines.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
-
-# 📸 SARA Screenshot Guide
-
-This guide provides detailed instructions for capturing and preparing screenshots for the SARA platform documentation.
-
-## Required Screenshots Overview
-
-### 1. Platform Banner (`banner.png`)
-- **Size**: 1920x480px
-- **Content**: Branded header image with SARA logo and tagline
-- **Style**: Dark theme with purple/blue gradient
-- **Location**: Top of README.md
-
-### 2. Student Dashboard (`dashboard.png`)
-- **Size**: 1920x1080px
-- **Key Elements**:
-  - Course cards grid
-  - Progress statistics
-  - AI assistant widget
-  - Recent activity feed
-  - Navigation menu
-  - Dark/light mode toggle
-- **State**: Show multiple courses with varying progress levels
-
-### 3. Interactive Learning Roadmap (`roadmap.png`)
-- **Size**: 1920x1080px
-- **Key Elements**:
-  - Node-based learning path
-  - Different node states:
-    - Locked (gray)
-    - Available (purple)
-    - In Progress (blue)
-    - Completed (green)
-  - Side panel with node details
-  - Progress indicators
-- **State**: Display an active node with opened details panel
-
-1. `dashboard.png`
-   - Location: Main student dashboard
-   - What to capture: Show the overall layout with the course progress cards, AI assistant button, and navigation
-   - Recommended size: 1280x720px
-
-2. `roadmap.png`
-   - Location: Course roadmap view
-   - What to capture: Interactive learning path with nodes showing different states (locked, available, in-progress, completed)
-   - Include some hover states and the side panel showing node details
-   - Recommended size: 1280x720px
-
-3. `professor-dashboard.png`
-   - Location: Professor's dashboard
-   - What to capture: Analytics overview, student progress tracking, and course management interface
-   - Recommended size: 1280x720px
-
-## Screenshot Guidelines
-
-1. Use a high-resolution display (minimum 1440p)
-2. Set browser zoom to 100%
-3. Use system dark/light theme that matches your documentation theme
-4. Ensure no sensitive or personal information is visible
-5. Include examples of various states and interactions
-6. Use consistent window sizes across all screenshots
-
-## Placeholder Images
-
-Until you can take actual screenshots of the running application, you can use the following placeholder text in your markdown:
-
-```markdown
-![Screenshot Coming Soon](placeholder-image.png)
-*Screenshot coming soon: Brief description of what will be shown*
-```
-
-
-Built with ❤️ for better education
+*EduNexus - Empowering students and educators through AI-driven personalized learning*
