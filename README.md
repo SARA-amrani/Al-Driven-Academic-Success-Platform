@@ -1,16 +1,82 @@
 # SARA - Smart Adaptive Learning Roadmap Assistant
 
-SARA is an intelligent educational platform that combines AI-powered adaptive learning with interactive course roadmaps to provide personalized learning experiences for students. The platform features dynamic course progression, automated assessments, and AI-assisted learning support.
+![SARA Banner](./docs/images/banner.png)
 
-## Features
+SARA is an intelligent educational platform that combines AI-powered adaptive learning with interactive course roadmaps to provide personalized learning experiences for students. Using advanced AI algorithms and interactive visualizations, SARA creates dynamic learning paths that adapt to each student's progress, understanding, and learning style.
 
-### 🎓 For Students
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.0-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-purple.svg)](https://vitejs.dev/)
 
-- **Interactive Learning Roadmap**
-  - Visual course progression tracking
-  - AI-adapted learning paths based on performance
-  - Real-time status updates and progress monitoring
-  - Dynamic difficulty adjustment
+## 🌟 Key Features
+
+### For Students 📚
+- **AI-Powered Learning Paths**
+  - Dynamic course progression based on performance
+  - Real-time adaptation to learning style
+  - Personalized content recommendations
+  - Intelligent difficulty scaling
+
+### For Educators 👨‍🏫
+- **Comprehensive Analytics Dashboard**
+  - Student progress tracking
+  - Performance metrics visualization
+  - Learning pattern analysis
+  - Intervention opportunity identification
+
+### Technical Highlights 🛠
+- **Advanced AI Integration**
+  - Groq API for real-time AI processing
+  - Natural language understanding
+  - Predictive learning analytics
+  - Adaptive content generation
+
+## 📸 Screenshots & Interface Guide
+
+### Student Dashboard
+![Student Dashboard](./docs/images/dashboard.png)
+- Main student interface showing:
+  - Course overview cards
+  - Progress statistics
+  - Recent activity feed
+  - AI assistant quick access
+  - Upcoming deadlines
+  - Course recommendations
+
+### Interactive Learning Roadmap
+![Learning Roadmap](./docs/images/roadmap.png)
+- Dynamic course progression visualization:
+  - Node-based learning path
+  - Color-coded status indicators
+  - Progress tracking
+  - AI-adapted difficulty levels
+  - Resource recommendations
+
+### Course View Interface
+![Course View](./docs/images/course-view.png)
+- Comprehensive course management:
+  - Course materials and resources
+  - Progress tracking
+  - Assignment submissions
+  - Discussion forums
+  - Interactive content
+
+### Assessment Interface
+![Assessment Interface](./docs/images/assessment.png)
+- Advanced assessment features:
+  - AI-powered question generation
+  - Real-time feedback
+  - Performance analytics
+  - Adaptive difficulty
+
+### Professor Dashboard
+![Professor Dashboard](./docs/images/professor-dashboard.png)
+- Complete teaching management:
+  - Student progress monitoring
+  - Course analytics
+  - Content management
+  - Assessment tools
 
 ![Course Roadmap](./docs/images/roadmap.png)
 *Screenshot: Interactive Course Roadmap*
