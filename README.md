@@ -1,4 +1,4 @@
-# Smart Adaptive Learning Roadmap Assistant
+# AI-Driven Academic Success Platform
 
 ## 🎯 Core Purpose
 SARA is an AI-powered educational platform that creates personalized learning experiences by adapting to each student's progress and learning style in real-time.
