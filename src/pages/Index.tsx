@@ -27,7 +27,7 @@ const Index: React.FC = () => {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
             <GraduationCapIcon className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">EduNexus</span>
+            <span className="text-xl font-bold">aIqraa</span>
           </div>
           
           <div className="flex items-center gap-4">
@@ -97,7 +97,7 @@ const Index: React.FC = () => {
       
       <footer className="border-t py-8">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2025 EduNexus. All rights reserved.</p>
+          <p>© 2025 aIqraa. All rights reserved.</p>
         </div>
       </footer>
     </div>

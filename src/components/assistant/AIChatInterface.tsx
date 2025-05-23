@@ -38,7 +38,7 @@ export function AIChatInterface() {
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
         sender: 'ai',
-        content: "I'm analyzing your question about " + newMessage.substring(0, 20) + "... This is a simulated response for the EduNexus AI assistant demo.",
+        content: "I'm analyzing your question about " + newMessage.substring(0, 20) + "... This is a simulated response for the aIqraa AI assistant demo.",
         timestamp: new Date().toISOString(),
         relatedModules: ['2', '5'],
       };

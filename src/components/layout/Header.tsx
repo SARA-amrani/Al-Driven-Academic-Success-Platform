@@ -36,31 +36,16 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-8">
           <Link to="/" className="flex items-center gap-2">
             <GraduationCapIcon className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">EduNexus</span>
+            <span className="text-xl font-bold">aIqraa</span>
           </Link>
           
           <nav className="hidden md:flex gap-6">
             <Link to={user.role === 'student' ? '/student/dashboard' : '/professor/dashboard'} className="text-sm font-medium transition-colors hover:text-primary">
               Dashboard
             </Link>
-            <Link to={user.role === 'student' ? '/student/courses' : '/professor/courses'} className="text-sm font-medium transition-colors hover:text-primary">
-              Courses
+            <Link to={user.role === 'student' ? '/student/assistant' : '/professor/assistant'} className="text-sm font-medium transition-colors hover:text-primary">
+              AI Assistant
             </Link>
-            {user.role === 'student' && (
-              <Link to="/student/assistant" className="text-sm font-medium transition-colors hover:text-primary">
-                AI Assistant
-              </Link>
-            )}
-            {user.role === 'professor' && (
-              <Link to="/professor/resources" className="text-sm font-medium transition-colors hover:text-primary">
-                Resources
-              </Link>
-            )}
-            {user.role === 'professor' && (
-              <Link to="/professor/analytics" className="text-sm font-medium transition-colors hover:text-primary">
-                Analytics
-              </Link>
-            )}
           </nav>
         </div>
         

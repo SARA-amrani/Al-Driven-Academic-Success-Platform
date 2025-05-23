@@ -58,7 +58,7 @@ const LoginForm: React.FC = () => {
   return (
     <Card className="w-full max-w-md mx-auto edu-glass-card">
       <CardHeader className="space-y-2">
-        <CardTitle className="text-2xl font-bold text-center">Welcome to EduNexus</CardTitle>
+        <CardTitle className="text-2xl font-bold text-center">Welcome to aIqraa</CardTitle>
         <CardDescription className="text-center">
           Sign in to access your personalized learning experience
         </CardDescription>

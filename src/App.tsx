@@ -59,6 +59,8 @@ const App = () => (
               }>
                 <Route index element={<Navigate to="/professor/dashboard" replace />} />
                 <Route path="dashboard" element={<ProfessorDashboardPage />} />
+                <Route path="assistant" element={<Assistant />} />
+                
               </Route>
               
               <Route path="*" element={<NotFound />} />
